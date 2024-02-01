@@ -1,0 +1,16 @@
+{
+   "users": [
+        {
+            "name": "Al",
+            "role": "Admin"
+        },
+        {
+            "name": "Ro",
+            "role": "Admin"
+        },
+        {
+            "name": "Bruno",
+            "role": "Pet"
+        }
+   ]
+}

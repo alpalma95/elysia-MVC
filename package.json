@@ -1,0 +1,21 @@
+{
+  "name": "htmx",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts",
+    "db:push": "bunx drizzle-kit generate:sqlite && bun run ./src/db/migration.ts",
+    "db:seed": "bun run ./src/db/seeds/user.seed.ts"
+  },
+  "dependencies": {
+    "@elysiajs/html": "^0.8.0",
+    "@libsql/client": "^0.4.3",
+    "drizzle-orm": "^0.29.3",
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "drizzle-kit": "^0.20.14"
+  },
+  "module": "src/index.js"
+}
