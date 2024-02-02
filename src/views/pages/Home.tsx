@@ -21,13 +21,14 @@ const UserCard = ({ user }: UserCardProps) => (
 
 export default function Home({ users }: Props) {
     return (
-        <PageLayout title="Home">
+        <PageLayout title="Home" scriptFile="pages/home.ts">
             <h1>Home works!</h1>
             <ul>
                 {
                     users.map((user) => <UserCard user={user} />)
                 }
             </ul>
+            <img src="/img/signature.png" alt="" />
         </PageLayout>
     )
 }

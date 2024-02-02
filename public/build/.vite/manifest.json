@@ -1,0 +1,12 @@
+{
+  "frontend/main.ts": {
+    "file": "assets/main-CcsATWxm.js",
+    "isEntry": true,
+    "src": "frontend/main.ts"
+  },
+  "frontend/pages/home.ts": {
+    "file": "assets/home-txzEm259.js",
+    "isEntry": true,
+    "src": "frontend/pages/home.ts"
+  }
+}

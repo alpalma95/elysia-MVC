@@ -1,8 +1,31 @@
 interface Props {
-    title: string
+    title: string,
+    scriptFile?: string,
     children: string | JSX.Element | JSX.Element[] | (() => JSX.Element)
   }
-export default function PageLayout({children, title}: Props) {
+
+interface ScriptProps {
+    scriptFile: string
+}
+
+const ViteHead = async ({scriptFile}: ScriptProps) => {
+    const mode = Bun.env.MODE
+    const manifest = mode === 'PROD' ? JSON.parse(await Bun.file('public/build/.vite/manifest.json').text()) : null
+
+    return (
+        !manifest ?
+        <>
+          <script type="module" src="http://localhost:5173/@vite/client"></script>
+          <script type="module" src={`http://localhost:5173/frontend/${scriptFile ?? 'main.ts'}`}></script>
+        </>
+        :
+        <script type="module" src={`build/${manifest['frontend/' + scriptFile].file}`} defer></script>
+
+      
+    )
+}
+
+export default function PageLayout({children, title, scriptFile}: Props) {
     return (
         <>
         {"<!DOCTYPE html>"}
@@ -11,6 +34,7 @@ export default function PageLayout({children, title}: Props) {
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <title>{title} | Elysia web 1.0 app!</title>
+            <ViteHead scriptFile={scriptFile ?? 'main.ts'} />
         </head>
         <body>
             {children}

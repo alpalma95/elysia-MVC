@@ -4,18 +4,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts",
+    "dev:front": "bunx --bun vite",
+    "build:front": "bunx --bun vite build",
     "db:push": "bunx drizzle-kit generate:sqlite && bun run ./src/db/migration.ts",
     "db:seed": "bun run ./src/db/seeds/user.seed.ts"
   },
   "dependencies": {
     "@elysiajs/html": "^0.8.0",
+    "@elysiajs/static": "^0.8.1",
     "@libsql/client": "^0.4.3",
     "drizzle-orm": "^0.29.3",
     "elysia": "latest"
   },
   "devDependencies": {
     "bun-types": "latest",
-    "drizzle-kit": "^0.20.14"
+    "drizzle-kit": "^0.20.14",
+    "vite": "^5.0.12"
   },
   "module": "src/index.js"
 }
