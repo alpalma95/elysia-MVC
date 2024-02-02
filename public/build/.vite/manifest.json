@@ -5,7 +5,10 @@
     "src": "frontend/main.ts"
   },
   "frontend/pages/home.ts": {
-    "file": "assets/home-txzEm259.js",
+    "css": [
+      "assets/home-Xar22tue.css"
+    ],
+    "file": "assets/home--cCS_9sM.js",
     "isEntry": true,
     "src": "frontend/pages/home.ts"
   }

@@ -1,34 +1,28 @@
-import { User } from "../../db/schemas/user.schema"
-import PageLayout from "../layouts/page"
+import { User } from "../../db/schemas/user.schema";
+import PageLayout from "../layouts/page";
+import UserCard, { UserCardLoader } from "../components/UserCard";
 
 interface Props {
-    users: User[]
+  users: User[];
 }
 
-interface UserCardProps {
-    user: User
-}
-
-const UserCard = ({ user }: UserCardProps) => (
-    <li>
-        <strong>Name</strong>: {user.name}
-        <br />
-        <strong>Surname</strong>: {user.surname}
-        <br />
-        <strong>Role</strong>: {user.role}
-    </li>
-)
+export const HomeLoader = () => {
+  console.log("Working from HOME loader");
+  UserCardLoader();
+};
 
 export default function Home({ users }: Props) {
-    return (
-        <PageLayout title="Home" scriptFile="pages/home.ts">
-            <h1>Home works!</h1>
-            <ul>
-                {
-                    users.map((user) => <UserCard user={user} />)
-                }
-            </ul>
-            <img src="/img/signature.png" alt="" />
-        </PageLayout>
-    )
+  return (
+    <PageLayout title="Home" scriptFile="pages/home.ts">
+      <div class="container mx-auto">
+        <h1 class="text-3xl font-bold mb-3">Home works!</h1>
+        <ul>
+          {users.map((user) => (
+            <UserCard user={user} />
+          ))}
+        </ul>
+        <img src="/img/signature.png" alt="" />
+      </div>
+    </PageLayout>
+  );
 }
