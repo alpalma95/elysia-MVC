@@ -1,8 +1,9 @@
 import "../main.css";
-import { HomeLoader } from "../../src/views/pages/Home";
 import Alpine from 'alpinejs'
+import { components } from "../../src/views/pages/Home.client";
  
-HomeLoader(Alpine);
+// Components
+components.forEach( loader => loader(Alpine))
  
 Alpine.start()
 

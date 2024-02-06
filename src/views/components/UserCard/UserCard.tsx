@@ -1,19 +1,9 @@
-import { Alpine } from "alpinejs";
-import { User } from "../../db/schemas/user.schema";
+import { User } from "../../../db/schemas/user.schema";
 
 interface UserCardProps {
   user: User;
   step?: number;
 }
-
-export const UserCardLoader = ({ data }: Alpine) => {
-  data('userCard', () => ({
-    count: 0,
-    inc(step=1) {
-      this.count += step
-    }
-  }))
-};
 
 export default function UserCard({ user, step }: UserCardProps) {
   return (

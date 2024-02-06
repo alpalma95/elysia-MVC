@@ -1,17 +1,12 @@
 import { User } from "../../db/schemas/user.schema";
 import PageLayout from "../layouts/page";
-import UserCard, { UserCardLoader } from "../components/UserCard";
+import UserCard from "../components/UserCard/UserCard";
 import { Alpine } from "alpinejs";
 
 
 interface Props {
   users: User[];
 }
-
-export const HomeLoader = (alpine: Alpine) => {
- 
-  UserCardLoader(alpine);
-};
 
 export default function Home({ users }: Props) {
   return (
