@@ -1,5 +1,8 @@
 import "../main.css";
 import { HomeLoader } from "../../src/views/pages/Home";
-
-HomeLoader();
+import Alpine from 'alpinejs'
+ 
+HomeLoader(Alpine);
+ 
+Alpine.start()
 

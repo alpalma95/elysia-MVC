@@ -13,6 +13,8 @@
     "@elysiajs/html": "^0.8.0",
     "@elysiajs/static": "^0.8.1",
     "@libsql/client": "^0.4.3",
+    "@types/alpinejs": "^3.13.6",
+    "alpinejs": "^3.13.5",
     "drizzle-orm": "^0.29.3",
     "elysia": "latest"
   },

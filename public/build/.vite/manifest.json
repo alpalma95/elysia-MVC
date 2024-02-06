@@ -1,19 +1,15 @@
 {
-  "frontend/main.ts": {
+  "assets/main.ts": {
     "file": "assets/main-CcsATWxm.js",
     "isEntry": true,
-    "src": "frontend/main.ts"
+    "src": "assets/main.ts"
   },
-  "frontend/pages/home.ts": {
-<<<<<<< HEAD
-    "file": "assets/home-GdX_n12A.js",
-=======
+  "assets/pages/home.ts": {
     "css": [
-      "assets/home-Xar22tue.css"
+      "assets/home-1cKyr0nt.css"
     ],
-    "file": "assets/home--cCS_9sM.js",
->>>>>>> cb0d91696609ee65ff0751d723f04b3d5f7e0b5b
+    "file": "assets/home-KOjVOChn.js",
     "isEntry": true,
-    "src": "frontend/pages/home.ts"
+    "src": "assets/pages/home.ts"
   }
 }
