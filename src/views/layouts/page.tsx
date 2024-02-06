@@ -20,19 +20,19 @@ const ViteHead = async ({ scriptFile }: ScriptProps) => {
       <script type="module" src="http://localhost:5173/@vite/client"></script>
       <script
         type="module"
-        src={`http://localhost:5173/frontend/${scriptFile ?? "main.ts"}`}
+        src={`http://localhost:5173/assets/${scriptFile ?? "main.ts"}`}
       ></script>
     </>
   ) : (
     <>
       <script
         type="module"
-        src={`build/${manifest["frontend/" + scriptFile].file}`}
+        src={`build/${manifest["assets/" + scriptFile].file}`}
         defer
       ></script>
       <link
         rel="stylesheet"
-        href={`build/${manifest["frontend/" + scriptFile].css[0]}`}
+        href={`build/${manifest["assets/" + scriptFile].css[0]}`}
       />
     </>
   );

@@ -8,8 +8,8 @@ export default defineConfig({
       copyPublicDir: false,
       rollupOptions: {
         input: {
-            main: '/frontend/main.ts',
-            home: '/frontend/pages/home.ts'
+            main: '/assets/main.ts',
+            home: '/assets/pages/home.ts'
         },
       },
     },
