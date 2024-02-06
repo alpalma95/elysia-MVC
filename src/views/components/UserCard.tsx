@@ -5,17 +5,17 @@ interface UserCardProps {
 }
 
 export const UserCardLoader = () => {
-  console.log("Working from USERCARDLOADER");
+  console.log("Working from USERCARD LOADER");
 };
 
 export default function UserCard({ user }: UserCardProps) {
   return (
     <li class="pl-3 mb-3">
-      <strong>Name</strong>: {user.name}
+      <strong class="text-blue-900">Name</strong>: {user.name}
       <br />
-      <strong>Surname</strong>: {user.surname}
+      <strong class="text-blue-900">Surname</strong>: {user.surname}
       <br />
-      <strong>Role</strong>: {user.role}
+      <strong class="text-blue-900">Role</strong>: {user.role}
     </li>
   );
 }
