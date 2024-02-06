@@ -1,7 +1,6 @@
 import { User } from "../../db/schemas/user.schema";
 import PageLayout from "../layouts/page";
 import UserCard from "../components/UserCard/UserCard";
-import { Alpine } from "alpinejs";
 
 
 interface Props {
