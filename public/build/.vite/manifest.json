@@ -5,7 +5,14 @@
     "src": "frontend/main.ts"
   },
   "frontend/pages/home.ts": {
+<<<<<<< HEAD
     "file": "assets/home-GdX_n12A.js",
+=======
+    "css": [
+      "assets/home-Xar22tue.css"
+    ],
+    "file": "assets/home--cCS_9sM.js",
+>>>>>>> cb0d91696609ee65ff0751d723f04b3d5f7e0b5b
     "isEntry": true,
     "src": "frontend/pages/home.ts"
   }
