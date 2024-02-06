@@ -17,8 +17,10 @@
     "elysia": "latest"
   },
   "devDependencies": {
+    "@unocss/preset-wind": "^0.58.4",
     "bun-types": "latest",
     "drizzle-kit": "^0.20.14",
+    "unocss": "^0.58.4",
     "vite": "^5.0.12"
   },
   "module": "src/index.js"
